@@ -335,7 +335,9 @@ local SaveManager = {} do
 
             local sentconfig = false
 
-           section2:AddButton({
+           local sentconfig = false
+
+section2:AddButton({
     Text = 'Upload',
     Func = function()
         if not sentconfig then
@@ -378,9 +380,8 @@ local SaveManager = {} do
         end
     end,
     DoubleClick = true,
-    Tooltip = 'Upload your config to the Config Browser (Double Click)'
+    Tooltip = 'Upload your config to the Config Browser (Double Click)',
 })
-
 
 		SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName', 'Show_Cloud_Configs', 'CloudConfigName', 'CloudConfigDesc' })
 	end
@@ -389,3 +390,4 @@ local SaveManager = {} do
 end
 
 return SaveManager
+end
